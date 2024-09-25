@@ -91,3 +91,31 @@
     heroAnimation.play()
   }
 }())
+
+
+// Form submission
+document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+  console.log('Form submitted');
+  e.preventDefault();
+  const email = e.target.email.value;
+
+  fetch('https://script.google.com/macros/s/AKfycbxruhC2n7LbIYueup7Og2w8FkkWsJl4XIjk0Ea04g3GlnfTg5ua1UQOe0kWOwyz8xU87w/exec', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ email: email })
+  })
+    .then(response => {
+      if (response.ok) {
+        alert('Thank you for signing up!');
+      } else {
+        alert('There was an error. Please try again.');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('There was an error. Please try again.');
+    });
+});
