@@ -589,7 +589,7 @@
 							<p class="section-paragraph">Sign up to Ayda.ai BETA today for early access to your
 								financial future</p>
 						</div>
-						<form class="footer-form newsletter-form field field-grouped" id="newsletter-form">
+						<form id="newsletter-form" class="footer-form newsletter-form field field-grouped">
 							<div class="control control-expanded">
 								<input class="input" type="email" name="email" placeholder="Your best email&hellip;"
 									required>
@@ -700,6 +700,26 @@
 	</div>
 
 	<script src="dist/js/main.min.js"></script>
+	<script>
+		document.getElementById('newsletter-form').addEventListener('submit', function (event) {
+			event.preventDefault();
+			const email = event.target.email.value;
+			fetch('https://script.google.com/macros/s/AKfycbxruhC2n7LbIYueup7Og2w8FkkWsJl4XIjk0Ea04g3GlnfTg5ua1UQOe0kWOwyz8xU87w/exec', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ email: email })
+			})
+				.then(response => response.json())
+				.then(data => {
+					console.log('Success:', data);
+				})
+				.catch((error) => {
+					console.error('Error:', error);
+				});
+		});
+	</script>
 </body>
 
 </html>
