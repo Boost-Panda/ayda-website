@@ -589,7 +589,8 @@
 							<p class="section-paragraph">Sign up to Ayda.ai BETA today for early access to your
 								financial future</p>
 						</div>
-						<form id="newsletter-form" class="footer-form newsletter-form field field-grouped">
+						<form action="https://sheetdb.io/api/v1/oa73zweseg22o" method="post" id="newsletter-form"
+							class="footer-form newsletter-form field field-grouped">
 							<div class="control control-expanded">
 								<input class="input" type="email" name="email" placeholder="Your best email&hellip;"
 									required>
@@ -701,23 +702,18 @@
 
 	<script src="dist/js/main.min.js"></script>
 	<script>
-		document.getElementById('newsletter-form').addEventListener('submit', function (event) {
-			event.preventDefault();
-			const email = event.target.email.value;
-			fetch('https://script.google.com/macros/s/AKfycbwxHH1MMMkXjlefV7aaVUdvJzP4_D6xxlXOzJVwotf5MWwUiMkxw_P_PYAlWxT5wUyLNQ/exec', {
-				method: 'POST',
-				headers: {
-					'Content-Type': 'application/json'
-				},
-				body: JSON.stringify({ email: email })
+		document.getElementById('newsletter-form').addEventListener("submit", (e) => {
+			e.preventDefault();
+			fetch(form.action, {
+				method: "POST",
+				body: new FormData(
+					document.getElementById("newsletter-form")
+				),
 			})
-				.then(response => response.json())
-				.then(data => {
-					console.log('Success:', data);
-				})
-				.catch((error) => {
-					console.error('Error:', error);
-				});
+				.then((response) => response.json())
+			// .then((html) => {
+			// 	window.open("nextpage.html", "_blank");
+			// });
 		});
 	</script>
 </body>
