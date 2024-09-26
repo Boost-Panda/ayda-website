@@ -94,11 +94,11 @@
 
 
 // Form submission
-document.getElementById('newsletter-form').addEventListener('submit', function (e) {
+function handleSubmit (e) {
   console.log('Form submitted');
   e.preventDefault();
   const email = e.target.email.value;
-
+  console.log(email);
   fetch('https://script.google.com/macros/s/AKfycbxruhC2n7LbIYueup7Og2w8FkkWsJl4XIjk0Ea04g3GlnfTg5ua1UQOe0kWOwyz8xU87w/exec', {
     method: 'POST',
     mode: 'no-cors',
@@ -118,4 +118,6 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
       console.error('Error:', error);
       alert('There was an error. Please try again.');
     });
-});
+}
+
+document.getElementById('newsletter-form').addEventListener('submit', handleSubmit);
