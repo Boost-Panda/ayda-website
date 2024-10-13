@@ -5,9 +5,31 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Primary Meta Tags -->
+	<title>Ayda - Invest in Yourself</title>
+	<meta name="title" content="Ayda - Invest in Yourself" />
+	<meta name="description"
+		content="Ayda ai is the financial It girl when it comes to wealth building. A personal chat assistant & community designed with women in mind that aids understanding, grow awareness and gain access to halal investing" />
+
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://aydainvest.com/" />
+	<meta property="og:title" content="Ayda - Invest in Yourself" />
+	<meta property="og:description"
+		content="Ayda ai is the financial It girl when it comes to wealth building. A personal chat assistant & community designed with women in mind that aids understanding, grow awareness and gain access to halal investing" />
+	<meta property="og:image" content="https://i.postimg.cc/dt1yJFR8/temp-Image3-SRBc-P.avif" />
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:url" content="https://aydainvest.com/" />
+	<meta property="twitter:title" content="Ayda - Invest in Yourself" />
+	<meta property="twitter:description"
+		content="Ayda ai is the financial It girl when it comes to wealth building. A personal chat assistant & community designed with women in mind that aids understanding, grow awareness and gain access to halal investing" />
+	<meta property="twitter:image" content="https://i.postimg.cc/dt1yJFR8/temp-Image3-SRBc-P.avif" />
+
 	<title>Ayda</title>
 	<link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700|Fira+Sans:600" rel="stylesheet">
-	<link rel="stylesheet" href="dist/css/style.css">
+	<link rel="stylesheet" href="src/scss/style.css">
 	<script src="https://unpkg.com/animejs@2.2.0/anime.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 	<script src="https://cdn.tailwindcss.com"></script>
@@ -59,8 +81,8 @@
 				<div class="container">
 					<div class="hero-inner">
 						<div class="hero-copy">
-							<h1 class="hero-title mt-0 mb-0 h1">Welcome to Ayda</h1>
-							<span class="hero-title mt-0 italic h1"><i>Your Financial Bestie</i></span>
+							<h1 class="hero-title mt-0 mb-0 h2 lg:h1 ">Welcome to Ayda</h1>
+							<span class="hero-title mt-0 italic h2 lg:h1 "><i>Your Financial Bestie</i></span>
 							<p class="hero-paragraph mt-4 mb-4">
 								There’s no better time to <b>start investing</b> in you than now. </p>
 							<p class="mb-2">
@@ -361,7 +383,7 @@
 				<div class="container mt-0 pt-0">
 					<div class="pb-20">
 						<div class="text-center">
-							<div class="container-sm">
+							<div class="container">
 								<h2 class="h2 mt-0">Here is the problem</h2>
 							</div>
 						</div>
@@ -452,11 +474,11 @@
 			<section class=" section">
 				<div class="container ">
 					<div class=" text-center pt-20 pb-10">
-						<div class="container-sm">
-							<h2 class="section-title h2 mt-0 mb-5">Welome to Ayda</h2>
+						<div class="container">
+							<h2 class="section-title h2 mt-0 mb-5">Welcome to Ayda</h2>
 							<p class="section-paragraph">Ayda ai is <i>the</i> financial It girl when it comes to wealth
 								building. A personal chat assistant & community designed with women in mind that aids
-								understanding, grow awareness and gain access to halal investing..
+								understanding, grow awareness and gain access to halal investing.
 							</p>
 						</div>
 					</div>
@@ -466,7 +488,7 @@
 			<section class=" section  pb-10">
 				<div class="container">
 					<div class=" text-center pt-20">
-						<div class="container-sm">
+						<div class="container">
 							<h2 class="section-title h2 mt-0 mb-5">With Ayda You Get</h2>
 							<!-- <p class="section-paragraph">Hi I’m Ayda, and I’m here to answer your investing
 									questions to help build the life you want.</p> -->
@@ -637,12 +659,8 @@
 				</div>
 			</section>
 
-			<section class="section pb-20">
-				<h2 class="h2 text-center">We're ending financial illiteracy now</h2>
-			</section>
-
 			<section class="newsletter section text-light">
-				<div class="container-sm">
+				<div class="container">
 					<div class="newsletter-inner py-10">
 						<div class="newsletter-header text-center">
 							<h2 class="h2 italic">The girls that get it, get it 💅</h2>
@@ -721,21 +739,7 @@
 	</div>
 
 	<script src="dist/js/main.min.js"></script>
-	<script>
-		document.getElementById('newsletter-form').addEventListener("submit", (e) => {
-			e.preventDefault();
-			fetch(form.action, {
-				method: "POST",
-				body: new FormData(
-					document.getElementById("newsletter-form")
-				),
-			})
-				.then((response) => response.json())
-			// .then((html) => {
-			// 	window.open("nextpage.html", "_blank");
-			// });
-		});
-	</script>
+
 </body>
 
 </html>
