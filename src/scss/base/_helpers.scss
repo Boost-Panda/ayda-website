@@ -2,21 +2,21 @@
 .container-sm {
 	width: 100%;
 	margin: 0 auto;
-	padding-left: get-content-padding(mobile);
-	padding-right: get-content-padding(mobile);
+	padding-left: 16px;
+	padding-right: 16px;
 
 	@include media( '>small' ) {
-		padding-left: get-content-padding(desktop);
-		padding-right: get-content-padding(desktop);
+		padding-left: 60px;
+		padding-right: 60px;
 	}
 }
 
 .container {
-	max-width: $container__width + ( get-content-padding(desktop) * 2 );
+	max-width: $container__width + ( 60px * 2 );
 }
 
 .container-sm {
-	max-width: $container__width-sm + ( get-content-padding(desktop) * 2 );
+	max-width: $container__width-sm + ( 60px * 2 );
 }
 
 .container {
